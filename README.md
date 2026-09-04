@@ -54,6 +54,7 @@ Here is the folder structure of this app.
       |--- about.tsx
       |--- banner.tsx
       |--- contact.tsx
+      |--- ErrorBoundary.tsx
       |--- experience.tsx
       |--- feedbacks.tsx
       |--- footer.tsx
@@ -82,11 +83,11 @@ Here is the folder structure of this app.
   |- bun.lock
   |- index.html
   |- netlify.toml
+  |- package-lock.json
   |- package.json
   |- postcss.config.cjs
   |- tailwind.config.ts
   |- tsconfig.json
-  |- tsconfig.tsbuildinfo
   |- vite.config.ts
 ```
 <!--- FOLDER_STRUCTURE_END --->
