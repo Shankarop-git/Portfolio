@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1C3C6E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4A90D9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="16" fill="url(#lg)"/>
+  <!-- Chain link left -->
+  <rect x="12" y="38" width="28" height="14" rx="7" fill="none" stroke="#ffffff" stroke-width="5"/>
+  <!-- Chain link right -->
+  <rect x="60" y="48" width="28" height="14" rx="7" fill="none" stroke="#ffffff" stroke-width="5"/>
+  <!-- Connector -->
+  <rect x="36" y="43" width="28" height="14" rx="7" fill="none" stroke="#a0c4ff" stroke-width="4"/>
+  <!-- L text -->
+  <text x="50" y="80" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">LC</text>
+</svg>
