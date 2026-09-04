@@ -2,7 +2,7 @@
 
 # Modern 3D Portfolio using React, Three.js and Typescript
 
-![Modern 3D Portfolio using React, Three.js and Typescript](/.github/images/img_main.png "Modern 3D Portfolio using React, Three.js and Typescript")
+
 
 <!-- Table of Contents -->
 <details>
