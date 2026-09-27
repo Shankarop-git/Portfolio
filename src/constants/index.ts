@@ -29,12 +29,12 @@ import {
   project4,
   project5,
   project6,
+  project7,
+  project8,
   user1,
   user2,
   user3,
-  youtube,
   linkedin,
-  twitter,
   github,
   java,
   python,
@@ -405,23 +405,41 @@ export const PROJECTS = [
     source_code_link: "https://github.com/Shankarop-git/SpendWise",
     live_site_link: "https://frontend-delta-eight-3wzr6yec0v.vercel.app/",
   },
+  {
+    name: "🤖 Client Onboarding System – AI-Powered Automation",
+    description:
+      "An automated client onboarding system built with n8n and AI, featuring intelligent workflow automation that handles personalized welcome emails, automated service agreement generation, AI-powered content summarization, and scheduled follow-up communications — streamlining the entire onboarding process.",
+    tags: [
+      { name: "n8n", color: "blue-text-gradient" },
+      { name: "AI Automation", color: "green-text-gradient" },
+      { name: "Email", color: "pink-text-gradient" },
+      { name: "Workflow", color: "blue-text-gradient" },
+    ],
+    image: project7,
+    source_code_link: "https://github.com/Shankarop-git/client-onboarding-system",
+    live_site_link: "",
+  },
+  {
+    name: "🌦️ AI Weather Assistant – Smart Weather Automation",
+    description:
+      "An AI-powered weather assistant built with n8n automation workflows. Provides intelligent weather queries, real-time forecast data retrieval, natural language weather insights, and automated weather alert notifications — combining AI capabilities with workflow automation for a seamless experience.",
+    tags: [
+      { name: "n8n", color: "blue-text-gradient" },
+      { name: "AI Agent", color: "green-text-gradient" },
+      { name: "Weather API", color: "pink-text-gradient" },
+      { name: "Automation", color: "blue-text-gradient" },
+    ],
+    image: project8,
+    source_code_link: "https://github.com/Shankarop-git/AI-Weather-Assistant",
+    live_site_link: "",
+  },
 ] as const;
 
 export const SOCIALS = [
   {
-    name: "YouTube",
-    icon: youtube,
-    link: "https://www.youtube.com",
-  },
-  {
     name: "Linkedin",
     icon: linkedin,
     link: "https://www.linkedin.com/in/shankarpatil45/",
-  },
-  {
-    name: "Twitter",
-    icon: twitter,
-    link: "https://x.com",
   },
   {
     name: "GitHub",
