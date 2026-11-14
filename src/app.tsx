@@ -8,6 +8,7 @@ import {
   Navbar,
   Tech,
   Works,
+  LeetCode,
   StarsCanvas,
 } from "./components";
 import Footer from "./components/footer";
@@ -26,6 +27,7 @@ const App = () => {
         <Experience />
         <Tech />
         <Works />
+        <LeetCode />
         <Feedbacks />
 
         {/* Contact */}

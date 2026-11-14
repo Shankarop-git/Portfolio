@@ -92,14 +92,18 @@ export const About = () => {
                 </ul>
               </div>
 
-              <div className="grid grid-cols-2 gap-4 border-t border-white/10 pt-4">
+              <div className="grid grid-cols-3 gap-3 border-t border-white/10 pt-4">
                 <div>
                   <p className="text-white font-bold text-[18px]">4+</p>
                   <p className="text-secondary text-[12px]">Featured Projects</p>
                 </div>
                 <div>
                   <p className="text-white font-bold text-[18px]">1</p>
-                  <p className="text-secondary text-[12px]">Internship Completed</p>
+                  <p className="text-secondary text-[12px]">Internship</p>
+                </div>
+                <div>
+                  <p className="text-white font-bold text-[18px]">114+</p>
+                  <p className="text-secondary text-[12px]">LeetCode Solved</p>
                 </div>
               </div>
             </div>

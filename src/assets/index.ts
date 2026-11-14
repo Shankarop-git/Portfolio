@@ -57,6 +57,7 @@ import user3 from "./testimonials/user3.jpg";
 
 import github from "./socials/github.svg";
 import linkedin from "./socials/linkedin.svg";
+import leetcode from "./socials/leetcode.svg";
 
 export {
   backend,
@@ -110,4 +111,5 @@ export {
   user3,
   github,
   linkedin,
+  leetcode,
 };

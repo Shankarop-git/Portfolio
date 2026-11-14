@@ -15,6 +15,7 @@ import { Hero } from "./hero";
 import { Navbar } from "./navbar";
 import { Tech } from "./tech";
 import { Works } from "./works";
+import { LeetCode } from "./leetcode";
 import { ErrorBoundary } from "./ErrorBoundary";
 
 export {
@@ -30,5 +31,6 @@ export {
   StarsCanvas,
   Tech,
   Works,
+  LeetCode,
   ErrorBoundary,
 };
