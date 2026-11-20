@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { logo, menu, close } from "../assets";
-import { NAV_LINKS, SOCIALS } from "../constants";
+import { NAV_LINKS, SOCIALS, RESUME_LINK } from "../constants";
 import { styles } from "../styles";
 import { cn } from "../utils/lib";
 
@@ -89,6 +89,22 @@ export const Navbar = ({ hide }: NavbarProps) => {
               </a>
             ))}
           </li>
+
+          {/* Resume Button (Desktop) */}
+          <li className="flex items-center ml-1">
+            <a
+              href={RESUME_LINK}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="inline-flex items-center gap-1.5 bg-[#915eff]/20 hover:bg-[#915eff] text-white border border-[#915eff]/50 hover:border-transparent px-3 py-1.5 rounded-lg text-[13px] font-semibold transition-all duration-300 shadow-sm hover:scale-[1.03]"
+              title="View Resume"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              <span>Resume</span>
+            </a>
+          </li>
         </ul>
 
         {/* Hamburger Menu (Mobile) */}
@@ -147,6 +163,21 @@ export const Navbar = ({ hide }: NavbarProps) => {
                     <img src={social.icon} alt={social.name} className="w-4 h-4 object-contain" />
                   </a>
                 ))}
+              </li>
+
+              {/* Resume Button (Mobile) */}
+              <li className="w-full pt-1">
+                <a
+                  href={RESUME_LINK}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="w-full flex items-center justify-center gap-2 bg-[#915eff] hover:bg-[#804dee] text-white py-2 px-4 rounded-lg text-sm font-semibold shadow-md transition-colors"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  <span>Download Resume</span>
+                </a>
               </li>
             </ul>
           </div>

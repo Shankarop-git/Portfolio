@@ -453,6 +453,8 @@ export const LEETCODE_INFO = {
   ranking: "1,577,557",
 } as const;
 
+export const RESUME_LINK = "/resume.pdf";
+
 export const SOCIALS = [
   {
     name: "Linkedin",

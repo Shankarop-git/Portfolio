@@ -1,7 +1,7 @@
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
-import { SERVICES } from "../constants";
+import { SERVICES, RESUME_LINK } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -105,6 +105,21 @@ export const About = () => {
                   <p className="text-white font-bold text-[18px]">114+</p>
                   <p className="text-secondary text-[12px]">LeetCode Solved</p>
                 </div>
+              </div>
+
+              {/* Resume CTA */}
+              <div className="mt-5 pt-4 border-t border-white/10">
+                <a
+                  href={RESUME_LINK}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="w-full inline-flex items-center justify-center gap-2 bg-[#915eff] hover:bg-[#804dee] text-white py-2.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-md hover:shadow-[#915eff]/40 hover:scale-[1.02]"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  <span>Download Resume</span>
+                </a>
               </div>
             </div>
           </motion.div>
