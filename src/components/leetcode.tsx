@@ -308,16 +308,16 @@ export const LeetCode = () => {
               </div>
 
               {/* Badge Visual Showcase */}
-              <div className="my-5 flex flex-col items-center justify-center">
-                <div className="relative group overflow-hidden rounded-2xl border border-white/15 bg-black-200/90 shadow-2xl p-2 max-w-[340px] w-full">
+              <div className="my-3 flex flex-col items-center justify-center">
+                <div className="relative group overflow-hidden rounded-2xl border border-[#FFA116]/30 bg-black-200/95 shadow-xl p-2 flex flex-col items-center">
                   <img
                     src={leetcodeBadge}
                     alt="LeetCode 50 Days Badge 2026 - Shankar Patil"
-                    className="w-full h-auto object-cover rounded-xl group-hover:scale-[1.03] transition-transform duration-500"
+                    className="h-[175px] sm:h-[190px] w-auto object-contain rounded-xl group-hover:scale-[1.04] transition-transform duration-500 shadow-md"
                     loading="lazy"
                   />
-                  <div className="mt-2.5 text-center">
-                    <p className="text-white text-xs font-semibold bg-white/5 px-3 py-1 rounded-lg border border-white/10 inline-block">
+                  <div className="mt-2 text-center">
+                    <p className="text-[#FFA116] text-[11px] font-semibold bg-[#FFA116]/10 border border-[#FFA116]/30 px-3 py-0.5 rounded-full inline-block">
                       ✨ Solving Problems 50+ Days in 2026
                     </p>
                   </div>
