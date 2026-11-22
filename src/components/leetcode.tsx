@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 import { LEETCODE_INFO } from "../constants";
+import { leetcodeBadge } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -30,7 +31,7 @@ export const LeetCode = () => {
     hardSolved: LEETCODE_INFO.hard.solved,
     totalHard: LEETCODE_INFO.hard.total,
     ranking: LEETCODE_INFO.ranking,
-    activeDays: 55,
+    activeDays: 62,
     isLoading: true,
     lastUpdated: null,
   });
@@ -46,16 +47,16 @@ export const LeetCode = () => {
         const data = await res.json();
         const activeDaysCount = data.submissionCalendar
           ? Object.keys(data.submissionCalendar).length
-          : 55;
+          : 62;
 
         setStats({
-          totalSolved: data.totalSolved ?? 114,
-          easySolved: data.easySolved ?? 59,
-          totalEasy: data.totalEasy ?? 975,
-          mediumSolved: data.mediumSolved ?? 46,
-          totalMedium: data.totalMedium ?? 2146,
+          totalSolved: data.totalSolved ?? 130,
+          easySolved: data.easySolved ?? 71,
+          totalEasy: data.totalEasy ?? 977,
+          mediumSolved: data.mediumSolved ?? 50,
+          totalMedium: data.totalMedium ?? 2150,
           hardSolved: data.hardSolved ?? 9,
-          totalHard: data.totalHard ?? 989,
+          totalHard: data.totalHard ?? 992,
           ranking: data.ranking ? Number(data.ranking).toLocaleString() : LEETCODE_INFO.ranking,
           activeDays: activeDaysCount,
           isLoading: false,
@@ -73,8 +74,8 @@ export const LeetCode = () => {
       if (res.ok) {
         const data = await res.json();
         const ac = data.totalSubmissions || [];
-        const easy = ac.find((s: { difficulty: string }) => s.difficulty === "Easy")?.count ?? 59;
-        const med = ac.find((s: { difficulty: string }) => s.difficulty === "Medium")?.count ?? 46;
+        const easy = ac.find((s: { difficulty: string }) => s.difficulty === "Easy")?.count ?? 71;
+        const med = ac.find((s: { difficulty: string }) => s.difficulty === "Medium")?.count ?? 50;
         const hard = ac.find((s: { difficulty: string }) => s.difficulty === "Hard")?.count ?? 9;
 
         setStats((prev) => ({
@@ -117,7 +118,7 @@ export const LeetCode = () => {
       </motion.p>
 
       <div className="mt-12 flex flex-col lg:flex-row gap-8 items-stretch">
-        {/* Left Card: Detailed Breakdown */}
+        {/* Left Card: Detailed Breakdown & Live Stats */}
         <motion.div
           variants={fadeIn("right", "spring", 0.2, 0.75)}
           className="w-full lg:w-1/2 green-pink-gradient p-[1px] rounded-2xl shadow-card"
@@ -158,9 +159,9 @@ export const LeetCode = () => {
                     Live Sync
                   </span>
                   <div className="flex items-center gap-1.5 bg-[#FFA116]/10 border border-[#FFA116]/30 px-3 py-1 rounded-full">
-                    <span className="text-sm">🏅</span>
+                    <span className="text-sm">🏆</span>
                     <span className="text-[#FFA116] text-xs font-semibold">
-                      {LEETCODE_INFO.badge}
+                      Rank #{stats.ranking}
                     </span>
                   </div>
                 </div>
@@ -266,7 +267,7 @@ export const LeetCode = () => {
             {/* Footer Action */}
             <div className="pt-4 border-t border-white/10 flex items-center justify-between flex-wrap gap-3">
               <span className="text-xs text-secondary">
-                Global Ranking: <span className="text-white font-medium">#{stats.ranking}</span>
+                Profile: <span className="text-white font-medium">Shankar Patil</span>
               </span>
               <a
                 href={LEETCODE_INFO.profileUrl}
@@ -281,53 +282,76 @@ export const LeetCode = () => {
           </div>
         </motion.div>
 
-        {/* Right Card: Live LeetCard Visual Widget */}
+        {/* Right Card: 50 Days Badge 2026 Showcase */}
         <motion.div
           variants={fadeIn("left", "spring", 0.4, 0.75)}
-          className="w-full lg:w-1/2 flex flex-col justify-between p-6 sm:p-8 bg-black-200/90 border border-white/10 rounded-2xl shadow-card"
+          className="w-full lg:w-1/2 green-pink-gradient p-[1px] rounded-2xl shadow-card"
         >
-          <div>
-            <div className="flex items-center justify-between mb-4">
-              <h4 className="text-white text-[18px] font-bold">
-                Live Performance Card
-              </h4>
-              <span className="text-xs text-green-400 bg-green-500/10 border border-green-500/30 px-2.5 py-1 rounded-full flex items-center gap-1.5 font-medium">
-                <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-                Auto Synced
-              </span>
+          <div className="bg-tertiary rounded-2xl p-6 sm:p-8 h-full flex flex-col justify-between">
+            <div>
+              {/* Header */}
+              <div className="flex items-center justify-between pb-4 border-b border-white/10 gap-3 flex-wrap">
+                <div>
+                  <h4 className="text-white text-[20px] font-bold flex items-center gap-2">
+                    <span>50 Days Badge 2026</span>
+                  </h4>
+                  <p className="text-secondary text-xs mt-0.5">
+                    Official LeetCode Annual Achievement Award
+                  </p>
+                </div>
+                <div className="flex items-center gap-1.5 bg-[#FFA116]/10 border border-[#FFA116]/30 px-3 py-1.5 rounded-full">
+                  <span className="text-sm">🏅</span>
+                  <span className="text-[#FFA116] text-xs font-semibold">
+                    Verified Award
+                  </span>
+                </div>
+              </div>
+
+              {/* Badge Visual Showcase */}
+              <div className="my-5 flex flex-col items-center justify-center">
+                <div className="relative group overflow-hidden rounded-2xl border border-white/15 bg-black-200/90 shadow-2xl p-2 max-w-[340px] w-full">
+                  <img
+                    src={leetcodeBadge}
+                    alt="LeetCode 50 Days Badge 2026 - Shankar Patil"
+                    className="w-full h-auto object-cover rounded-xl group-hover:scale-[1.03] transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="mt-2.5 text-center">
+                    <p className="text-white text-xs font-semibold bg-white/5 px-3 py-1 rounded-lg border border-white/10 inline-block">
+                      ✨ Solving Problems 50+ Days in 2026
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Milestone Details */}
+              <div className="grid grid-cols-2 gap-3 pt-1">
+                <div className="p-3 rounded-xl bg-white/5 border border-white/10">
+                  <p className="text-secondary text-[11px] uppercase tracking-wider">Recipient</p>
+                  <p className="text-white text-sm font-bold mt-0.5">Shankar Patil</p>
+                </div>
+                <div className="p-3 rounded-xl bg-white/5 border border-white/10">
+                  <p className="text-secondary text-[11px] uppercase tracking-wider">Consistency</p>
+                  <p className="text-[#FFA116] text-sm font-bold mt-0.5">{stats.activeDays}+ Days Active</p>
+                </div>
+              </div>
             </div>
-            <p className="text-secondary text-xs mb-6">
-              Real-time representation of solved challenges, category ratios, and active submission ranking.
-            </p>
-          </div>
 
-          <div className="flex items-center justify-center p-2 rounded-xl bg-black-100/60 border border-white/5 overflow-hidden">
-            <a
-              href={LEETCODE_INFO.profileUrl}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="w-full flex justify-center hover:scale-[1.02] transition-transform duration-300"
-              title="Click to visit LeetCode profile"
-            >
-              <img
-                src={`https://leetcard.jacoblin.cool/${LEETCODE_INFO.username}?theme=dark&font=Karma`}
-                alt="LeetCode Stats Card"
-                className="w-full max-w-[480px] object-contain rounded-lg"
-                loading="lazy"
-              />
-            </a>
-          </div>
-
-          <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-secondary">
-            <span>Primary Focus: Core Algorithms &amp; Optimization</span>
-            <a
-              href={LEETCODE_INFO.profileUrl}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="text-[#FFA116] hover:underline font-medium"
-            >
-              leetcode.com/u/{LEETCODE_INFO.username}
-            </a>
+            {/* Footer Action */}
+            <div className="pt-4 mt-4 border-t border-white/10 flex items-center justify-between flex-wrap gap-3">
+              <span className="text-xs text-secondary">
+                Challenge: <span className="text-white font-medium">LeetCode 2026 Daily Streak</span>
+              </span>
+              <a
+                href={LEETCODE_INFO.profileUrl}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="inline-flex items-center gap-2 bg-[#FFA116]/10 hover:bg-[#FFA116] text-[#FFA116] hover:text-black border border-[#FFA116]/40 text-xs font-semibold px-4 py-2 rounded-lg transition-all shadow-md"
+              >
+                <span>Verify on LeetCode</span>
+                <span className="text-sm">&rarr;</span>
+              </a>
+            </div>
           </div>
         </motion.div>
       </div>

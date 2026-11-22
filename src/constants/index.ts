@@ -294,7 +294,7 @@ export const CORE_EXPERTISE = [
     icon: "🎯",
     description:
       "Strong CS fundamentals with continuous active practice in Data Structures & Algorithms using Java.",
-    skills: ["LeetCode 114+ Solved (59E/46M/9H)", "50 Days Badge 2026", "Data Structures", "Algorithms", "Java OOP", "DBMS"],
+    skills: ["LeetCode 130+ Solved (71E/50M/9H)", "50 Days Badge 2026", "Data Structures", "Algorithms", "Java OOP", "DBMS"],
     color: "from-rose-500/20 to-pink-500/20 border-rose-500/30",
   },
 ] as const;
@@ -444,13 +444,13 @@ export const PROJECTS = [
 export const LEETCODE_INFO = {
   username: "D1m0836r0z",
   profileUrl: "https://leetcode.com/u/D1m0836r0z/",
-  totalSolved: 114,
-  easy: { solved: 59, total: 975, color: "text-[#00b8a3]", bg: "bg-[#00b8a3]" },
-  medium: { solved: 46, total: 2146, color: "text-[#ffc01e]", bg: "bg-[#ffc01e]" },
-  hard: { solved: 9, total: 989, color: "text-[#ef4743]", bg: "bg-[#ef4743]" },
+  totalSolved: 130,
+  easy: { solved: 71, total: 977, color: "text-[#00b8a3]", bg: "bg-[#00b8a3]" },
+  medium: { solved: 50, total: 2150, color: "text-[#ffc01e]", bg: "bg-[#ffc01e]" },
+  hard: { solved: 9, total: 992, color: "text-[#ef4743]", bg: "bg-[#ef4743]" },
   badge: "50 Days Badge 2026",
   badgeIcon: "https://assets.leetcode.com/static_assets/others/50_1080_1080.png",
-  ranking: "1,577,557",
+  ranking: "1,414,940",
 } as const;
 
 export const RESUME_LINK = "/resume.pdf";

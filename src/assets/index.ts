@@ -58,6 +58,7 @@ import user3 from "./testimonials/user3.jpg";
 import github from "./socials/github.svg";
 import linkedin from "./socials/linkedin.svg";
 import leetcode from "./socials/leetcode.svg";
+import leetcodeBadge from "./leetcode-50-days-badge.jpg";
 
 export {
   backend,
@@ -112,4 +113,5 @@ export {
   github,
   linkedin,
   leetcode,
+  leetcodeBadge,
 };

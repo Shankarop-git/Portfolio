@@ -102,7 +102,7 @@ export const About = () => {
                   <p className="text-secondary text-[12px]">Internship</p>
                 </div>
                 <div>
-                  <p className="text-white font-bold text-[18px]">114+</p>
+                  <p className="text-white font-bold text-[18px]">130+</p>
                   <p className="text-secondary text-[12px]">LeetCode Solved</p>
                 </div>
               </div>
